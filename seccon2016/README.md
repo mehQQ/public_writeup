@@ -33,6 +33,7 @@ The buf is not null-terminated, so the result of strchr may be out of bounds.
 ### Exploit  
 
 We use the vul to shrink the chunk size, and then use unlink to get a big chunk.  
+(Read this again: http://www.slideshare.net/AngelBoy1/advanced-heap-exploitaion)  
 The chunks after unlink is like:  
 ```  
 /          freed in unsortbin          \
