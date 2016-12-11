@@ -10,7 +10,7 @@ Port : 8273
 Execute command : ./mvees_sandbox --replicas=1 --level=2 --out-limit=8192 --deny=11 ./mboard 2>&1
 ```
 This challenge is running in a sandbox. This sandbox runs two processes simultaneously and check the output and syscalls.  
-The check of memcpy is unused, so leaking some address is available.  
+The check of memcmp is unused, so leaking some address is available.  
 
 ### Vulnerability  
 
