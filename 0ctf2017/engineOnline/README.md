@@ -9,8 +9,9 @@ you can get the binary from the attachment of challenge engineTest
 
 libc.so.6
 ```
-I cannot understand what this program is doing until my teammates solved the reverse part ... and still don't understand it clearly now.  
+I cannot understand what this program is doing until my teammates Lucas and Lays solved the reverse part ... and still don't understand it clearly now.  
 Briefly, this program writes memory according to **ip** and print memory according to **op**, we didn't use cp so it is omitted.  
+And I got the read/write functions from my teammate Lucas. :P  
 
 ### Exploit  
 This program allows us to write everywhere **below** input memory, so we make it big enough to be mapped above libc section.  
