@@ -101,7 +101,7 @@ After that, we create a thread for monitor.
 ```
 
 * Upload PNG and overwrite return address to ROP  
-The pointer of outputBuffer will point to the bottom of thread stack. So we can overwrite return address by uploading a PNG, then do ROP to leak libc and stack migration to ROP again.  
+Now the outputBuffer and the stack is partially **overlapped**(The pointer points to somewhere inside the bottom of thread stack). So we can overwrite return address by uploading a PNG, then do ROP to leak libc and stack migration to ROP again.  
 
 Something need to be noticed is that when two threads are both reading a same fd, the input will be receive by one thread **not in order**. It only depends on which thread is served at that time. (just my observation, not very sure)  
 After observing remote server, we found that the main thread is always the first, so we sent a newline before payload to solve this problem.    
